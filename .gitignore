@@ -1,6 +1,6 @@
 files
 bin
-Stableford Family Tree.ged
-lib
+tree.ged
+/lib/
 include
 .DS_Store

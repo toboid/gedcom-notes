@@ -1,6 +1,3 @@
-from gedcom.element.individual import IndividualElement
-from gedcom.element.family import FamilyElement
-from gedcom.parser import Parser
 import gedcom.tags
 
 
@@ -54,23 +51,3 @@ class Individual:
                           self.gedcom.get_family_members(family, 'PARENTS'))
             family_parents.extend(list(parents))
         return filter(lambda p: p.get_pointer() != self.individual_element.get_pointer(), family_parents)
-        # return family_parents
-
-
-class FamilyTree:
-    def __init__(self, gedcom_file_path):
-
-        self.gedcom = Parser()
-        self.gedcom.parse_file(gedcom_file_path)
-
-        self.individuals = []
-        self.families = []
-        self.other = []
-
-        for element in self.gedcom.get_root_child_elements():
-            if isinstance(element, IndividualElement):
-                self.individuals.append(Individual(element, self.gedcom))
-            elif isinstance(element, FamilyElement):
-                self.families.append(element)
-            else:
-                self.other.append(element)

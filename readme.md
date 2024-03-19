@@ -1,5 +1,16 @@
 # Family tree parser
 
+## Available scripts
+
+### create_notes.py
+Creates an Obsidian note for each person in the gedcom file. Each note contains main (not all)
+details and links to family members.
+
+Note that currently the output_dir must already exist.
+```sh
+python src/create_notes.py --output_dir="./files" --file_path="./tree.ged"
+```
+
 ## Useful python commands
 Load the venv
 ```sh
