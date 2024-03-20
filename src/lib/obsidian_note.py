@@ -2,8 +2,8 @@ import os
 
 
 class ObsidianNote:
-    def __init__(self, entity_name, output_dir):
-        self.file_path = os.path.join(output_dir, entity_name + '.md')
+    def __init__(self, file_name, output_dir):
+        self.file_path = os.path.join(output_dir, file_name + '.md')
         self.file = None
 
     def __enter__(self):

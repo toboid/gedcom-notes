@@ -9,6 +9,9 @@ class Individual:
     def __getattr__(self, attr):
         return getattr(self.individual_element, attr)
 
+    def get_id(self):
+        return self.get_pointer().replace('@', '')
+
     def get_display_name(self):
         return ' '.join(self.individual_element.get_name()).title()
 

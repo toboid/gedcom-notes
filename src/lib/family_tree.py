@@ -23,13 +23,8 @@ class FamilyTree:
                 self.other.append(element)
 
     def find(self, search):
-        search_items = [f'{key}={value}' for key, value in search.items()]
-        search_string = ':'.join(search_items)
-
-        print(search_string)
-
         for individual in self.individuals:
-            if individual.criteria_match(search_string):
+            if individual.criteria_match(search):
                 return individual
 
     def get_ancestors(self, individual):
