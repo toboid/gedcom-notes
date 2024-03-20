@@ -36,7 +36,7 @@ with ObsidianNote('Mermaid tree ' + output_file_suffix, output_dir) as note:
 
     for person in people:
         id = person.get_id()
-        write_indented(f'{id}("{person.get_display_name()}")')
+        write_indented(f'{id}("{person.get_display_name()} {person.get_birth_year()}")')
         parents = ' & '.join([p.get_id() for p in person.get_parents()])
         if len(parents):
             write_indented(f'{parents} --- {id}')

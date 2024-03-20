@@ -15,6 +15,9 @@ class Individual:
     def get_display_name(self):
         return ' '.join(self.individual_element.get_name()).title()
 
+    def get_file_name(self):
+        return self.get_display_name() + ' ' + str(self.get_birth_year())
+
     def get_birth_date(self):
         dt, *_ = self.get_birth_data()
         return dt
