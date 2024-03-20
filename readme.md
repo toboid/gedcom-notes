@@ -1,4 +1,5 @@
 # Family tree parser
+This is a personal project to generate markdown notes and mermaid diagrams from a gedcom family tree file. Sharing here for others to reference but please keep in mind this was developed for my personal use and to practice a bit of Python.
 
 ## Available scripts
 
